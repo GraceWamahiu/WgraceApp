@@ -1,5 +1,6 @@
 package com.example.wgraceapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -14,18 +15,23 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.layoutId
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -48,84 +54,84 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Demo(){
-    Column(modifier = Modifier.fillMaxSize
-        ()) {
+    Column(modifier = Modifier.fillMaxSize()) {
+        val mContext = LocalContext.current
         Text(
             text = "Welcome to Android",
             color = Color.Red,
-            fontSize = 30.sp,
+            fontSize = 20.sp,
             fontStyle = FontStyle.Italic,
             fontWeight = FontWeight.Bold
         )
-        Text(text = "Android software development is the process by which applications are created for devices running the Android operating system. Google states that \"Android apps can be written using Kotlin, Java, and C++ languages\" using the Android software development kit, while using other languages is also possible.")
+        Text(text = "Get your car!!.")
 
         Button(
-            onClick = { /*TODO*/ },
-            shape = RoundedCornerShape(5.dp),
+            onClick = {
+                mContext.startActivity(Intent(mContext,DestinationActivity::class.java))
+            },
+            shape = RoundedCornerShape(4.dp),
             colors = ButtonDefaults.buttonColors(Color.Red),
             modifier = Modifier.align(Alignment.CenterHorizontally)
 
-
-
-
         ) {
-            Text(text = "See more")
+            Text(text = "Destination")
         }
 
-
-    Spacer(modifier = Modifier.height(20.dp))
     Text(
         text = "Types of cars",
-        fontSize = 20.sp,
+        fontSize = 10.sp,
         color = Color.White,
         fontWeight = FontWeight.Bold,
         modifier = Modifier.run {
             fillMaxWidth()
                 .background(Color.Red)
-                .height(40.dp)
+                .height(20.dp)
         },
         textAlign = TextAlign.Center,
         textDecoration = TextDecoration.Underline
     )
     Text(text = "1.BMW")
     Text(text = "2.Mercedes Benz")
-    Text(text = "3.Ferrari")
-    Text(text = "4.Bugatti")
-    Spacer(modifier = Modifier.height(20.dp))
+        Box(modifier = Modifier.fillMaxWidth(),
+            contentAlignment = Alignment.Center) {
+            Button(
+                onClick = {mContext.startActivity(Intent(mContext,ExploreActivity::class.java)) }
+            ){
+               Text(text = "Explore")
+            }
+        }
     //Centering an image
     Box(modifier = Modifier.fillMaxWidth(),
         contentAlignment = Alignment.Center) {
         Image(painter = painterResource(id = R.drawable.bmw),
             contentDescription = "car",
-            modifier = Modifier.size(200.dp))
+            modifier = Modifier
+                .size(200.dp)
+                .clip(shape = CircleShape),
+            contentScale = ContentScale.Crop)
     }
 
     Text(text = "BEST CAR COMPANIES IN KENYA",
         color = Color.Black,
         fontWeight = FontWeight.Bold,
-        fontSize = 20.sp,
+        fontSize = 10.sp,
         textAlign = TextAlign.Center,
         modifier = Modifier.run {
             fillMaxWidth()
                 .background(Color.Blue)
-                .height(40.dp)
+                .height(20.dp)
         })
     Text(text = "1.A-PLUS MOTORS LTD. AUTOBATT GROUP LIMITED")
-    Text(text = "2.Amex Autoparts. Associated Vehicle Assemblers Limited")
-    Text(text = "3.August Auto Agencies Ltd. Auto Springs East Africa (PLC)")
-    Text(text = "4.Autochek Kenya. Autofine Limited")
-    Text(text = "etc.")
     Divider()
     Spacer(modifier = Modifier.height(20.dp))
 
     Text(
         text = "eMobilis Mobile Training Institute",
-        fontSize = 20.sp,
+        fontSize = 10.sp,
         fontWeight = FontWeight.Bold)
-    Spacer(modifier = Modifier.height(20.dp))
 
     Button(
-        onClick = { /*TODO*/ },
+        onClick = { mContext.startActivity(Intent(mContext,LayoutActivity::class.java)) },
         shape = RoundedCornerShape(5.dp),
         colors = ButtonDefaults.buttonColors(Color.Red),
         modifier = Modifier

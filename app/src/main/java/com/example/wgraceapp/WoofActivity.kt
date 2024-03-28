@@ -9,12 +9,15 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -50,23 +53,219 @@ fun Woof(){
     ){
 
     }
-       Box(contentAlignment = Alignment.Center,
-           padd) {
            Row{
                Image(
                    painter = painterResource(id = R.drawable.paw) ,
                    contentDescription ="paw",
-                   modifier = Modifier.size(90.dp))
+                   modifier = Modifier.size(40.dp))
                Column {
                    Text(
                        text = "Woof",
                        fontWeight = FontWeight.Bold,
-                       fontSize = 50.sp,
+                       fontSize = 40.sp,
                        fontFamily = FontFamily.Serif)
                }
            }
+    //CARD 1
+    Card (modifier = Modifier
+        .padding(start = 10.dp)
+        .fillMaxWidth()){
+        Row {
+            Image(painter = painterResource(id = R.drawable.paw),
+                contentDescription ="Madola",
+                modifier = Modifier
+                    .size(width = 50.dp, height = 55.dp)
+                    .size(100.dp)
+                    .clip(shape = CircleShape)
+
+            )
+
+            Spacer(modifier =Modifier.width(10.dp))
+
+            Column {
+                Text(text="Koda", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                Text(text= "2 years old")
+            }
+        }
+    }
+    //END OF CARD 1
+    Spacer(modifier =Modifier.height(10.dp))
+
+    //CARD 2
+    Card (modifier = Modifier
+        .padding(start = 10.dp)
+        .fillMaxWidth()){
+        Row {
+            Image(painter = painterResource(id = R.drawable.paw),
+                contentDescription ="Madola",
+                modifier = Modifier
+                    .size(width = 50.dp, height = 55.dp)
+                    .size(100.dp)
+                    .clip(shape = CircleShape)
+
+            )
+
+            Spacer(modifier =Modifier.width(10.dp))
+
+            Column {
+                Text(text="Lola", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                Text(text= "16 years old")
+            }
+        }
+    }
+    //END OF CARD 2
+    Spacer(modifier =Modifier.height(10.dp))
+
+    //CARD 3
+    Card (modifier = Modifier
+        .padding(start = 10.dp)
+        .fillMaxWidth()){
+        Row {
+            Image(painter = painterResource(id = R.drawable.paw),
+                contentDescription ="Madola",
+                modifier = Modifier
+                    .size(width = 50.dp, height = 55.dp)
+                    .size(100.dp)
+                    .clip(shape = CircleShape)
+
+            )
+
+            Spacer(modifier =Modifier.width(10.dp))
+
+            Column {
+                Text(text="Frankie", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                Text(text= "2 years old")
+            }
+        }
+    }
+    //END OF CARD 3
+    Spacer(modifier =Modifier.height(10.dp))
+
+    //CARD 4
+    Card (modifier = Modifier
+        .padding(start = 10.dp)
+        .fillMaxWidth()){
+        Row {
+            Image(painter = painterResource(id = R.drawable.paw),
+                contentDescription ="Madola",
+                modifier = Modifier
+                    .size(width = 50.dp, height = 55.dp)
+                    .size(100.dp)
+                    .clip(shape = CircleShape)
+
+            )
+
+            Spacer(modifier =Modifier.width(10.dp))
+
+            Column {
+                Text(text="Nox", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                Text(text= "8 years old")
+            }
+        }
+    }
+    //END OF CARD 4
+    Spacer(modifier =Modifier.height(10.dp))
+
+    //CARD 5
+    Card (modifier = Modifier
+        .padding(start = 10.dp)
+        .fillMaxWidth()){
+        Row {
+            Image(painter = painterResource(id = R.drawable.paw),
+                contentDescription ="Madola",
+                modifier = Modifier
+                    .size(width = 50.dp, height = 55.dp)
+                    .size(100.dp)
+                    .clip(shape = CircleShape)
+
+            )
+
+            Spacer(modifier =Modifier.width(10.dp))
+
+            Column {
+                Text(text="Faye", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                Text(text= "6 years old")
+            }
+        }
+    }
+    //END OF CARD 5
+    Spacer(modifier =Modifier.height(10.dp))
+
+    //CARD 6
+    Card (modifier = Modifier
+        .padding(start = 10.dp)
+        .fillMaxWidth()){
+        Row {
+            Image(painter = painterResource(id = R.drawable.paw),
+                contentDescription ="Madola",
+                modifier = Modifier
+                    .size(width = 50.dp, height = 55.dp)
+                    .size(100.dp)
+                    .clip(shape = CircleShape)
+
+            )
+
+            Spacer(modifier =Modifier.width(10.dp))
+
+            Column {
+                Text(text="Bela", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                Text(text= "14 years old")
+            }
+        }
+    }
+    //END OF CARD 6
+    Spacer(modifier =Modifier.height(10.dp))
+
+    //CARD 7
+    Card (modifier = Modifier
+        .padding(start = 10.dp)
+        .fillMaxWidth()){
+        Row {
+            Image(painter = painterResource(id = R.drawable.paw),
+                contentDescription ="Madola",
+                modifier = Modifier
+                    .size(width = 50.dp, height = 55.dp)
+                    .size(100.dp)
+                    .clip(shape = CircleShape)
+
+            )
+
+            Spacer(modifier =Modifier.width(10.dp))
+
+            Column {
+                Text(text="Moana", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                Text(text= "2 years old")
+            }
+        }
+    }
+    //END OF CARD 7
+    Spacer(modifier =Modifier.height(10.dp))
+
+    //CARD 8
+    Card (modifier = Modifier
+        .padding(start = 10.dp)
+        .fillMaxWidth()){
+        Row {
+            Image(painter = painterResource(id = R.drawable.paw),
+                contentDescription ="Madola",
+                modifier = Modifier
+                    .size(width = 50.dp, height = 55.dp)
+                    .size(100.dp)
+                    .clip(shape = CircleShape)
+
+            )
+
+            Spacer(modifier =Modifier.width(10.dp))
+
+            Column {
+                Text(text="Tzeitel", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                Text(text= "7 years old")
+            }
+        }
+    }
+    //END OF CARD 8
+    Spacer(modifier =Modifier.height(10.dp))
        }
-}
 
 @Preview(showBackground = true)
 @Composable

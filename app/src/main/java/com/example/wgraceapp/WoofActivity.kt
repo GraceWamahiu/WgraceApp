@@ -81,7 +81,7 @@ fun Woof(){
             .padding(start = 10.dp)
             .fillMaxWidth()){
             Row {
-                Image(painter = painterResource(id = R.drawable.paw),
+                Image(painter = painterResource(id = R.drawable.alaskan),
                     contentDescription ="Madola",
                     modifier = Modifier
                         .size(width = 50.dp, height = 55.dp)
@@ -106,7 +106,7 @@ fun Woof(){
             .padding(start = 10.dp)
             .fillMaxWidth()){
             Row {
-                Image(painter = painterResource(id = R.drawable.paw),
+                Image(painter = painterResource(id = R.drawable.german),
                     contentDescription ="Madola",
                     modifier = Modifier
                         .size(width = 50.dp, height = 55.dp)
@@ -131,7 +131,7 @@ fun Woof(){
             .padding(start = 10.dp)
             .fillMaxWidth()){
             Row {
-                Image(painter = painterResource(id = R.drawable.paw),
+                Image(painter = painterResource(id = R.drawable.alaskan),
                     contentDescription ="Madola",
                     modifier = Modifier
                         .size(width = 50.dp, height = 55.dp)
@@ -156,7 +156,7 @@ fun Woof(){
             .padding(start = 10.dp)
             .fillMaxWidth()){
             Row {
-                Image(painter = painterResource(id = R.drawable.paw),
+                Image(painter = painterResource(id = R.drawable.german),
                     contentDescription ="Madola",
                     modifier = Modifier
                         .size(width = 50.dp, height = 55.dp)
@@ -181,7 +181,7 @@ fun Woof(){
             .padding(start = 10.dp)
             .fillMaxWidth()){
             Row {
-                Image(painter = painterResource(id = R.drawable.paw),
+                Image(painter = painterResource(id = R.drawable.alaskan),
                     contentDescription ="Madola",
                     modifier = Modifier
                         .size(width = 50.dp, height = 55.dp)
@@ -206,7 +206,7 @@ fun Woof(){
             .padding(start = 10.dp)
             .fillMaxWidth()){
             Row {
-                Image(painter = painterResource(id = R.drawable.paw),
+                Image(painter = painterResource(id = R.drawable.german),
                     contentDescription ="Madola",
                     modifier = Modifier
                         .size(width = 50.dp, height = 55.dp)
@@ -231,7 +231,7 @@ fun Woof(){
             .padding(start = 10.dp)
             .fillMaxWidth()){
             Row {
-                Image(painter = painterResource(id = R.drawable.paw),
+                Image(painter = painterResource(id = R.drawable.alaskan),
                     contentDescription ="Madola",
                     modifier = Modifier
                         .size(width = 50.dp, height = 55.dp)
@@ -256,7 +256,7 @@ fun Woof(){
             .padding(start = 10.dp)
             .fillMaxWidth()){
             Row {
-                Image(painter = painterResource(id = R.drawable.paw),
+                Image(painter = painterResource(id = R.drawable.german),
                     contentDescription ="Madola",
                     modifier = Modifier
                         .size(width = 50.dp, height = 55.dp)
@@ -278,7 +278,7 @@ fun Woof(){
 
         Button(onClick = { mContext.startActivity(Intent(mContext,DestinationActivity::class.java)) },
             shape = RoundedCornerShape(5.dp),
-            colors = ButtonDefaults.buttonColors(Color.DarkGray),) {
+            colors = ButtonDefaults.buttonColors(Color.Green),) {
             Text(text = "Next")
 
         }

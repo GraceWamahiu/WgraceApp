@@ -18,6 +18,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
@@ -88,8 +89,8 @@ fun MyForm(){
                         contentDescription ="share",
                         tint = Color.White)
                 }
-                IconButton(onClick = { /*TODO*/ }) {
-                    Icon(imageVector = Icons.Default.Settings ,
+                IconButton(onClick = { mContext.startActivity(Intent(mContext,ExploreActivity::class.java)) }) {
+                    Icon(imageVector = Icons.Default.ArrowForward,
                         contentDescription ="settings",
                         tint = Color.White)
                 }

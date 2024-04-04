@@ -25,6 +25,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -40,6 +41,10 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.animateLottieCompositionAsState
+import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.wgraceapp.ui.theme.WgraceAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -63,7 +68,13 @@ fun Demo(){
             fontStyle = FontStyle.Italic,
             fontWeight = FontWeight.Bold
         )
-        Text(text = "Get your car!!.")
+        Text(text = "TRAVEL WITH US!",
+            fontWeight = FontWeight.Bold)
+        Text(
+            text = "eMobilis Mobile Training Institute",
+            fontSize = 10.sp,
+            fontWeight = FontWeight.Bold)
+
 
         Button(
             onClick = {
@@ -78,20 +89,19 @@ fun Demo(){
         }
 
     Text(
-        text = "Types of cars",
+        text = "Nairobi Kenya tourist attractions",
         fontSize = 10.sp,
         color = Color.White,
         fontWeight = FontWeight.Bold,
         modifier = Modifier.run {
             fillMaxWidth()
-                .background(Color.Red)
+                .background(Color.Black)
                 .height(20.dp)
         },
         textAlign = TextAlign.Center,
         textDecoration = TextDecoration.Underline
     )
-    Text(text = "1.BMW")
-    Text(text = "2.Mercedes Benz")
+
         Box(modifier = Modifier.fillMaxWidth(),
             contentAlignment = Alignment.Center) {
             Button(
@@ -100,10 +110,19 @@ fun Demo(){
                Text(text = "Explore")
             }
         }
+        Box(modifier = Modifier.fillMaxWidth(),
+            contentAlignment = Alignment.Center) {
+            Button(
+                onClick = {mContext.startActivity(Intent(mContext,LottieActivity::class.java)) }
+            ){
+                Text(text = "Anime")
+            }
+        }
+Text(text = "Travel the World")
     //Centering an image
     Box(modifier = Modifier.fillMaxWidth(),
         contentAlignment = Alignment.Center) {
-        Image(painter = painterResource(id = R.drawable.bmw),
+        Image(painter = painterResource(id = R.drawable.elephant),
             contentDescription = "car",
             modifier = Modifier
                 .size(200.dp)
@@ -111,24 +130,6 @@ fun Demo(){
             contentScale = ContentScale.Crop)
     }
 
-    Text(text = "BEST CAR COMPANIES IN KENYA",
-        color = Color.Black,
-        fontWeight = FontWeight.Bold,
-        fontSize = 10.sp,
-        textAlign = TextAlign.Center,
-        modifier = Modifier.run {
-            fillMaxWidth()
-                .background(Color.Blue)
-                .height(20.dp)
-        })
-    Text(text = "1.A-PLUS MOTORS LTD. AUTOBATT GROUP LIMITED")
-    Divider()
-    Spacer(modifier = Modifier.height(20.dp))
-
-    Text(
-        text = "eMobilis Mobile Training Institute",
-        fontSize = 10.sp,
-        fontWeight = FontWeight.Bold)
 
     Button(
         onClick = { mContext.startActivity(Intent(mContext,LayoutActivity::class.java)) },
